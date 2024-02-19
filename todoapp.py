@@ -131,3 +131,25 @@ if __name__ == "__main__":
     )  
     # using the pack() method to place the label in the application  
     header_label.pack(padx = 20, pady = 20)  
+    
+    # defining another label using the ttk.Label() widget  
+    task_label = ttk.Label(  
+        functions_frame,  
+        text = "Enter the Task:",  
+        font = ("Consolas", "11", "bold"),  
+        background = "#FAEBD7",  
+        foreground = "#000000"  
+    )  
+    # using the place() method to place the label in the application  
+    task_label.place(x = 30, y = 40)  
+      
+    # defining an entry field using the ttk.Entry() widget  
+    task_field = ttk.Entry(  
+        functions_frame,  
+        font = ("Consolas", "12"),  
+        width = 18,  
+        background = "#FFF8DC",  
+        foreground = "#A52A2A"  
+    )  
+    # using the place() method to place the entry field in the application  
+    task_field.place(x = 30, y = 80)  
