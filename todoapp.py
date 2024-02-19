@@ -4,7 +4,6 @@ from tkinter import ttk                 # importing the ttk module from the tkin
 from tkinter import messagebox          # importing the messagebox module from the tkinter library  
 import sqlite3 as sql                   # importing the sqlite3 module as sql  
 
-  
 # defining the function to add tasks to the list  
 def add_task():  
     # getting the string from the entry field  
@@ -94,7 +93,7 @@ if __name__ == "__main__":
     # creating an object of the Tk() class  
     guiWindow = tk.Tk()  
     # setting the title of the window  
-    guiWindow.title("To-Do List Manager - JAVATPOINT")  
+    guiWindow.title("To-Do List Manager")  
     # setting the geometry of the window  
     guiWindow.geometry("500x450+750+250")  
     # disabling the resizable option  
@@ -124,8 +123,8 @@ if __name__ == "__main__":
     # defining a label using the ttk.Label() widget  
     header_label = ttk.Label(  
         header_frame,  
-        text = "The To-Do List",  
-        font = ("Brush Script MT", "30"),  
+        text = "My To-Do List App",  
+        font = ("Arial", "30"),  
         background = "#FAEBD7",  
         foreground = "#8B4513"  
     )  
