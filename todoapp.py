@@ -185,3 +185,15 @@ if __name__ == "__main__":
     del_button.place(x = 30, y = 160)  
     del_all_button.place(x = 30, y = 200)  
     exit_button.place(x = 30, y = 240)  
+    
+    # defining a list box using the tk.Listbox() widget  
+    task_listbox = tk.Listbox(  
+        listbox_frame,  
+        width = 26,  
+        height = 13,  
+        selectmode = 'SINGLE',  
+        background = "#FFFFFF",  
+        foreground = "#000000",  
+        selectbackground = "#CD853F",  
+        selectforeground = "#FFFFFF"  
+    )  
