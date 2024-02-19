@@ -70,3 +70,10 @@ def delete_all_tasks():
 def clear_list():  
     # using the delete method to delete all entries from the list box  
     task_listbox.delete(0, 'end')  
+    
+# function to close the application  
+def close():  
+    # printing the elements from the tasks list  
+    print(tasks)  
+    # using the destroy() method to close the application  
+    guiWindow.destroy()  
