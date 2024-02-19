@@ -88,4 +88,16 @@ def retrieve_database():
     for row in the_cursor.execute('select title from tasks'):  
         # using the append() method to insert the titles from the table in the list  
         tasks.append(row[0])  
-  
+
+# main function  
+if __name__ == "__main__":  
+    # creating an object of the Tk() class  
+    guiWindow = tk.Tk()  
+    # setting the title of the window  
+    guiWindow.title("To-Do List Manager - JAVATPOINT")  
+    # setting the geometry of the window  
+    guiWindow.geometry("500x450+750+250")  
+    # disabling the resizable option  
+    guiWindow.resizable(0, 0)  
+    # setting the background color to #FAEBD7  
+    guiWindow.configure(bg = "#FAEBD7")  
