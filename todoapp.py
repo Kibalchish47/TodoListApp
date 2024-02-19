@@ -153,3 +153,29 @@ if __name__ == "__main__":
     )  
     # using the place() method to place the entry field in the application  
     task_field.place(x = 30, y = 80)  
+    
+    # adding buttons to the application using the ttk.Button() widget  
+    add_button = ttk.Button(  
+        functions_frame,  
+        text = "Add Task",  
+        width = 24,  
+        command = add_task  
+    )  
+    del_button = ttk.Button(  
+        functions_frame,  
+        text = "Delete Task",  
+        width = 24,  
+        command = delete_task  
+    )  
+    del_all_button = ttk.Button(  
+        functions_frame,  
+        text = "Delete All Tasks",  
+        width = 24,  
+        command = delete_all_tasks  
+    )  
+    exit_button = ttk.Button(  
+        functions_frame,  
+        text = "Exit",  
+        width = 24,  
+        command = close  
+    )  
