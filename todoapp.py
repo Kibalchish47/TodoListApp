@@ -101,3 +101,22 @@ if __name__ == "__main__":
     guiWindow.resizable(0, 0)  
     # setting the background color to #FAEBD7  
     guiWindow.configure(bg = "#FAEBD7")  
+    # using the connect() method to connect to the database  
+    the_connection = sql.connect('listOfTasks.db')  
+    # creating the cursor object of the cursor class  
+    the_cursor = the_connection.cursor()  
+    # using the execute() method to execute a SQL statement  
+    the_cursor.execute('create table if not exists tasks (title text)')  
+    
+    # defining an empty list  
+    tasks = []  
+      
+    # defining frames using the tk.Frame() widget  
+    header_frame = tk.Frame(guiWindow, bg = "#FAEBD7")  
+    functions_frame = tk.Frame(guiWindow, bg = "#FAEBD7")  
+    listbox_frame = tk.Frame(guiWindow, bg = "#FAEBD7")  
+  
+    # using the pack() method to place the frames in the application  
+    header_frame.pack(fill = "both")  
+    functions_frame.pack(side = "left", expand = True, fill = "both")  
+    listbox_frame.pack(side = "right", expand = True, fill = "both")  
