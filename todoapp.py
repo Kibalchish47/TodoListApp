@@ -197,3 +197,15 @@ if __name__ == "__main__":
         selectbackground = "#CD853F",  
         selectforeground = "#FFFFFF"  
     )  
+    
+    # using the place() method to place the list box in the application  
+    task_listbox.place(x = 10, y = 20)  
+  
+    # calling some functions  
+    retrieve_database()  
+    list_update()  
+    # using the mainloop() method to run the application  
+    guiWindow.mainloop()  
+    # establishing the connection with database  
+    the_connection.commit()  
+    the_cursor.close()  
