@@ -99,7 +99,7 @@ if __name__ == "__main__":
     # disabling the resizable option  
     guiWindow.resizable(0, 0)  
     # setting the background color to #FAEBD7  
-    guiWindow.configure(bg = "#FAEBD7")  
+    guiWindow.configure(bg = "#0E91F1")  
     # using the connect() method to connect to the database  
     the_connection = sql.connect('listOfTasks.db')  
     # creating the cursor object of the cursor class  
@@ -111,9 +111,9 @@ if __name__ == "__main__":
     tasks = []  
       
     # defining frames using the tk.Frame() widget  
-    header_frame = tk.Frame(guiWindow, bg = "#FAEBD7")  
-    functions_frame = tk.Frame(guiWindow, bg = "#FAEBD7")  
-    listbox_frame = tk.Frame(guiWindow, bg = "#FAEBD7")  
+    header_frame = tk.Frame(guiWindow, bg = "#0DD1F2")  
+    functions_frame = tk.Frame(guiWindow, bg = "#0DD1F2")  
+    listbox_frame = tk.Frame(guiWindow, bg = "#0DD1F2")  
   
     # using the pack() method to place the frames in the application  
     header_frame.pack(fill = "both")  
@@ -124,9 +124,9 @@ if __name__ == "__main__":
     header_label = ttk.Label(  
         header_frame,  
         text = "My To-Do List App",  
-        font = ("Arial", "30"),  
-        background = "#FAEBD7",  
-        foreground = "#8B4513"  
+        font = ("Consolas", "30"),  
+        background = "#0DD1F2",  
+        foreground = "#000000"  
     )  
     # using the pack() method to place the label in the application  
     header_label.pack(padx = 20, pady = 20)  
@@ -135,8 +135,8 @@ if __name__ == "__main__":
     task_label = ttk.Label(  
         functions_frame,  
         text = "Enter the Task:",  
-        font = ("Consolas", "11", "bold"),  
-        background = "#FAEBD7",  
+        font = ("Consolas", "12", "bold"),  
+        background = "#0DD1F2",  
         foreground = "#000000"  
     )  
     # using the place() method to place the label in the application  
@@ -148,7 +148,7 @@ if __name__ == "__main__":
         font = ("Consolas", "12"),  
         width = 18,  
         background = "#FFF8DC",  
-        foreground = "#A52A2A"  
+        foreground = "#000000"  
     )  
     # using the place() method to place the entry field in the application  
     task_field.place(x = 30, y = 80)  
