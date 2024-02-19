@@ -179,3 +179,9 @@ if __name__ == "__main__":
         width = 24,  
         command = close  
     )  
+    
+    # using the place() method to set the position of the buttons in the application  
+    add_button.place(x = 30, y = 120)  
+    del_button.place(x = 30, y = 160)  
+    del_all_button.place(x = 30, y = 200)  
+    exit_button.place(x = 30, y = 240)  
