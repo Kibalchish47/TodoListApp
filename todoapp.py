@@ -76,4 +76,16 @@ def close():
     # printing the elements from the tasks list  
     print(tasks)  
     # using the destroy() method to close the application  
-    guiWindow.destroy()  
+    guiWindow.destroy()
+    
+# function to retrieve data from the database  
+def retrieve_database():  
+    # using the while loop to iterate through the elements in the tasks list  
+    while(len(tasks) != 0):  
+        # using the pop() method to pop out the elements from the list  
+        tasks.pop()  
+    # iterating through the rows in the database table  
+    for row in the_cursor.execute('select title from tasks'):  
+        # using the append() method to insert the titles from the table in the list  
+        tasks.append(row[0])  
+  
