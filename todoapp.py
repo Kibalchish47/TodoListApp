@@ -120,3 +120,14 @@ if __name__ == "__main__":
     header_frame.pack(fill = "both")  
     functions_frame.pack(side = "left", expand = True, fill = "both")  
     listbox_frame.pack(side = "right", expand = True, fill = "both")  
+    
+    # defining a label using the ttk.Label() widget  
+    header_label = ttk.Label(  
+        header_frame,  
+        text = "The To-Do List",  
+        font = ("Brush Script MT", "30"),  
+        background = "#FAEBD7",  
+        foreground = "#8B4513"  
+    )  
+    # using the pack() method to place the label in the application  
+    header_label.pack(padx = 20, pady = 20)  
