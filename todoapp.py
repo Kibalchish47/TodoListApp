@@ -64,4 +64,9 @@ def delete_all_tasks():
         # using the execute() method to execute a SQL statement  
         the_cursor.execute('delete from tasks')  
         # calling the function to update the list  
-        list_update()  
+        list_update()      
+  
+# function to clear the list  
+def clear_list():  
+    # using the delete method to delete all entries from the list box  
+    task_listbox.delete(0, 'end')  
