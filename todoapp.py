@@ -48,4 +48,20 @@ def delete_task():
             the_cursor.execute('delete from tasks where title = ?', (the_value,))  
     except:  
         # displaying the message box with 'No Item Selected' message for an exception  
-        messagebox.showinfo('Error', 'No Task Selected. Cannot Delete.')        
+        messagebox.showinfo('Error', 'No Task Selected. Cannot Delete.')
+        
+  
+# function to delete all tasks from the list  
+def delete_all_tasks():  
+    # displaying a message box to ask user for confirmation  
+    message_box = messagebox.askyesno('Delete All', 'Are you sure?')  
+    # if the value turns to be True  
+    if message_box == True:  
+        # using while loop to iterate through the tasks list until it's empty   
+        while(len(tasks) != 0):  
+            # using the pop() method to pop out the elements from the list  
+            tasks.pop()  
+        # using the execute() method to execute a SQL statement  
+        the_cursor.execute('delete from tasks')  
+        # calling the function to update the list  
+        list_update()  
