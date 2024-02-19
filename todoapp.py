@@ -22,3 +22,30 @@ def add_task():
         list_update()  
         # deleting the entry in the entry field  
         task_field.delete(0, 'end')  
+        
+# defining the function to update the list  
+def list_update():  
+    # calling the function to clear the list  
+    clear_list()  
+    # iterating through the strings in the list  
+    for task in tasks:  
+        # using the insert() method to insert the tasks in the list box  
+        task_listbox.insert('end', task)  
+  
+# defining the function to delete a task from the list  
+def delete_task():  
+    # using the try-except method  
+    try:  
+        # getting the selected entry from the list box  
+        the_value = task_listbox.get(task_listbox.curselection())  
+        # checking if the stored value is present in the tasks list  
+        if the_value in tasks:  
+            # removing the task from the list  
+            tasks.remove(the_value)  
+            # calling the function to update the list  
+            list_update()  
+            # using the execute() method to execute a SQL statement  
+            the_cursor.execute('delete from tasks where title = ?', (the_value,))  
+    except:  
+        # displaying the message box with 'No Item Selected' message for an exception  
+        messagebox.showinfo('Error', 'No Task Selected. Cannot Delete.')        
